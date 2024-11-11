@@ -1,0 +1,125 @@
+{
+  "users": [
+    {
+      "name": "Owner",
+      "email": "owner@gmail.com",
+      "phone": "1111111111",
+      "password": "1111111111"
+    },
+    {
+      "name": "Admin",
+      "email": "admin@gmail.com",
+      "phone": "2222222222",
+      "password": "2222222222"
+    }
+  ],
+  "roles": [
+    {
+      "name": "Owner"
+    },
+    {
+      "name": "Admin"
+    },
+    {
+      "name": "Member"
+    }
+  ],
+  "permits": [
+    {
+      "name": "Can View"
+    },
+    {
+      "name": "Can Edit"
+    },
+    {
+      "name": "Can Delete"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Phuket",
+      "image": "phuket_image.png",
+      "free_pickup_zone": [
+        "Nakalay",
+        "Kamala",
+        "Kata",
+        "Karon",
+        "Patong",
+        "Kalim",
+        "Tri Trang",
+        "Chalong",
+        "Phuket town",
+        "Siray Bay"
+      ],
+      "extra_charge_pickup_zone": [
+        "Laguna, Bang Tao, Surin, Rawai, Naiharn, Boat Lagoon - 300 THB - Per Person",
+        "Mai Khao, Naiyang, Yamu, Naithon, Cape Panwa, Layan - 1600 THB - Per Car"
+      ]
+    }
+  ],
+  "sub_categories": [
+    {
+      "name": "Island",
+      "image": "island_image.png"
+    }
+  ],
+  "child_categories": [],
+  "tags": [
+    {
+      "name": "Popular",
+      "image": "popular_image.png"
+    },
+    {
+      "name": "New Arrival",
+      "image": "new_arrival_image.png"
+    }
+  ],
+  "products": [
+    {
+      "name": "Phi Phi Island",
+      "price": 1999,
+      "discount": 10,
+      "rating": 5,
+      "desc": "Phi Phi Don was initially populated by Thai Malay fishermen during the late-1940s.",
+      "detail": "Phi Phi Don was initially populated by Thai Malay fishermen during the late-1940s, and later became a coconut plantation. The resident Thai population of Phi Phi Don remains more than 80 percent Muslim. The current population however—if counting transient workers—is more Buddhist than Muslim. The resident population is between 2,000 and 3,000 people (2018)",
+      "max_person": "14-15 persons",
+      "duration": "8-5 hours",
+      "start_time": "8:00 AM",
+      "images": [
+        "phi_phi_island_image_1.png",
+        "phi_phi_island_image_2.png"
+      ],
+      "recommended": [
+        "Who like Island",
+        "Who like popular package"
+      ],
+      "not_recommended": [
+        "Who doesn't like Island",
+        "Afraid of Water"
+      ],
+      "highlights": [
+        "Popular Island",
+        "Best Seller"
+      ],
+      "included": [
+        "Launch",
+        "Swimming Suits"
+      ],
+      "excluded": [
+        "Rent fee",
+        "Dinner"
+      ],
+      "to_bring": [
+        "Sun Glasses",
+        "Slipper"
+      ],
+      "destinations": [
+        "phuket"
+      ],
+      "expect_detail": [
+        "8:00 AM Start to go",
+        "9:00 AM Reached Island"
+      ]
+    }
+  ]
+}
