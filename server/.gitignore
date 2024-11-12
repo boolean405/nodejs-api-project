@@ -131,6 +131,6 @@ dist
 
 
 package-lock.json
-# migrations/backups/*
-# uploads/*
+migrations/backups/*
+uploads/*
 # next_time_to_do_list.txt

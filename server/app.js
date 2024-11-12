@@ -16,7 +16,7 @@ mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => {
     console.log("Success, MONGODB Connected");
-    
+
     // Run Server
     server.listen(
       process.env.PORT,
@@ -42,22 +42,18 @@ const product_router = require("./routes/product");
 const order_router = require("./routes/order");
 
 // For validation
-const {
-  validateToken,
-  validateRole,
-  hasAnyRole,
-} = require("./utils/validator");
+const { validateToken, validateRole } = require("./utils/validator");
 
-app.use("/permits", [validateToken(), validateRole("Owner"), permit_router]);
-app.use("/roles", [validateToken(), validateRole("Owner"), role_router]);
-app.use("/users", user_router);
-app.use("/categories", category_router);
-app.use("/subcategories", sub_category_router);
-// app.use('/childcategories', child_category_router);
-app.use("/tags", tag_router);
-app.use("/deliveries", delivery_router);
-app.use("/products", product_router);
-app.use("/orders", [validateToken(), order_router]);
+app.use("/api/permits", [validateToken(), validateRole("Owner"), permit_router]);
+app.use("/api/roles", [validateToken(), validateRole("Owner"), role_router]);
+app.use("/api/users", user_router);
+app.use("/api/categories", category_router);
+app.use("/api/subcategories", sub_category_router);
+// app.use('/api/childcategories', child_category_router);
+app.use("/api/tags", tag_router);
+app.use("/api/deliveries", delivery_router);
+app.use("/api/products", product_router);
+app.use("/api/orders", [validateToken(), order_router]);
 
 // Error Handling
 app.use((err, req, res, next) => {
@@ -74,11 +70,11 @@ const defaultData = async () => {
   await migrator.backup();
 };
 
-// Call all Default Data
-// defaultData();
+// Call all Default Data once time
+defaultData();
 
 // Socket.io Chatting
-io.of("/chat")
+io.of("api/chat")
   .use(async (socket, next) => {
     let token = socket.handshake.query.token;
     try {
