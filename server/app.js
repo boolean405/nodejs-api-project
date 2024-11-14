@@ -25,7 +25,7 @@ mongoose
       console.log(`Server is running at port ${port}`)
     );
   })
-  .catch((error) => console.log(error));
+  .catch((error) => console.error(error));
 
 // Use Express Json to get Body Data
 app.use(express.json());
@@ -73,7 +73,7 @@ const defaultData = async () => {
 };
 
 // Call all Default Data once time
-defaultData();
+// defaultData();
 
 // Socket.io Chatting
 io.of("api/chat")
