@@ -10,6 +10,8 @@ const jwt = require("jsonwebtoken");
 const Helper = require("./utils/helper");
 const Redis = require("./utils/redis");
 
+const port = process.env.PORT || 4000
+
 // Connect Mongo Database
 // mongoose.connect(`mongodb://127.0.0.1:27017/${process.env.DB_NAME}`);
 mongoose
@@ -19,8 +21,8 @@ mongoose
 
     // Run Server
     server.listen(
-      process.env.PORT,
-      console.log(`Server is running at port ${process.env.PORT}`)
+      port,
+      console.log(`Server is running at port ${port}`)
     );
   })
   .catch((error) => console.log(error));
