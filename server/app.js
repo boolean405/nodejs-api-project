@@ -73,7 +73,7 @@ const defaultData = async () => {
 };
 
 // Call all Default Data once time
-// defaultData();
+defaultData();
 
 // Socket.io Chatting
 io.of("api/chat")
