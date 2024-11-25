@@ -69,7 +69,7 @@ const defaultData = async () => {
   let migrator = require("./migrations/migrator");
   await migrator.defaultDataMigrate();
   await Helper.timer(1);
-  await migrator.backup();
+  // await migrator.backup();
 };
 
 // Call all Default Data once time
