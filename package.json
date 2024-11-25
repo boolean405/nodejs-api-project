@@ -1,5 +1,5 @@
 {
-  "name": "k-khay-tour",
+  "name": "k-khay-tour-server",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
