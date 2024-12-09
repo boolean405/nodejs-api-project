@@ -1,6 +1,4 @@
-# k-khay-tour
-
-create .env dir and add under
+# nodejs-api-project
 
 PORT = 3000
 DB_NAME = 
